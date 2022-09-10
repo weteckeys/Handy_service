@@ -1,0 +1,62 @@
+<ion-content>
+    <div class="main_content_div">
+
+        <div class="header_div">
+            <div class="flex_header">
+                <div class="left_div">
+                    <ion-label class="bold_lbl">Hi, Smitty</ion-label>
+                    <ion-label class="simp_lbl">Need a help ?</ion-label>
+                </div>
+                <div class="user_back" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+            </div>
+            <ion-input type="text" placeholder="Search">
+                <ion-icon name="search-sharp"></ion-icon>
+            </ion-input>
+        </div>
+
+        <div class="content_div">
+
+            <div class="slider_div">
+                <ion-slides scrollbar="ios" [options]="slideOpts">
+                    <ion-slide *ngFor="let item of [1,2,3,4,5,6,7,8]">
+                        <div class="inner_slide" [class.active_slide]="item == actSlider" (click)="actSlider = item">
+                            <div class="icn_div">
+                                <img src="assets/imgs/twitter.png">
+                            </div>
+                            <ion-label>Lorem</ion-label>
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+            </div>
+
+            <div class="header_flex">
+                <ion-label class="title_lbl">Our Services</ion-label>
+                <ion-label class="view_lbl" (click)="goToAllServices()">View All</ion-label>
+            </div>
+
+            <ion-slides scrollbar="ios" [options]="serviceOpts">
+                <ion-slide *ngFor="let item of serviceSlider" (click)="goToOrderDetail()">
+                    <div class="inner_service">
+                        <ion-label>{{item.name}}</ion-label>
+                        <img class="inner_img" src="{{item.img}}">
+                    </div>
+                </ion-slide>
+            </ion-slides>
+
+            <div class="header_flex">
+                <ion-label class="title_lbl">Hi News</ion-label>
+            </div>
+
+            <div class="news_div" *ngFor="let item of [1,2,3]">
+                <div class="news_image" [style.backgroundImage]="'url(assets/imgs/user.jpg)'"></div>
+                <div class="news_content">
+                    <ion-label class="title_lbl">Hi send</ion-label>
+                    <ion-label class="content_lbl">Have a problems with shopping goods ?</ion-label>
+                    <ion-icon name="chevron-forward-circle-sharp"></ion-icon>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</ion-content>

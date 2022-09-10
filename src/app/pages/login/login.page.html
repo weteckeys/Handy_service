@@ -1,0 +1,33 @@
+<ion-content>
+    <div class="main_content_div">
+        <div class="header_div">
+            <ion-icon name="arrow-back-outline" (click)="goToBack()"></ion-icon>
+            <ion-label>Hi Fix</ion-label>
+        </div>
+        <div class="content_div">
+            <ion-label class="title_lbl">Here to get <br> welcome !</ion-label>
+
+            <ion-input type="text" placeholder="Phone Number or email ID"></ion-input>
+            <ion-input type="text" placeholder="Password"></ion-input>
+            <ion-button (click)="goToWelcome()">
+              Sign In
+            </ion-button>
+
+            <div class="abs_div">
+                <ion-label class="or_lbl" >Or sign in with</ion-label>
+                <div class="or_div">
+                    <div class="grey_div">
+                        <img src="assets/imgs/facebook.png">
+                    </div>
+                    <div class="grey_div">
+                        <img src="assets/imgs/google.png">    
+                    </div>
+                    <div class="grey_div">
+                        <img src="assets/imgs/twitter.png" style="width: 22px;">    
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ion-content>
